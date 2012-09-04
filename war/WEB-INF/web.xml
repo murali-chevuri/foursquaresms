@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+  
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>greetServlet</servlet-name>
+    <servlet-class>com.apps.foursquare.sms.server.GreetingServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>greetServlet</servlet-name>
+    <url-pattern>/foursquaresms/greet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CallBack</servlet-name>
+    <servlet-class>com.apps.foursquare.sms.server.servlet.CallBack</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>CallBack</servlet-name>
+    <url-pattern>/oauth/callback</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ReadSMS</servlet-name>
+    <servlet-class>com.apps.foursquare.sms.server.servlet.ReadSMS</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ReadSMS</servlet-name>
+    <url-pattern>/readsms</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>UploadImage</servlet-name>
+    <servlet-class>com.apps.foursquare.sms.server.servlet.UploadImage</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>UploadImage</servlet-name>
+    <url-pattern>/uploadimage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>DisplayImage</servlet-name>
+    <servlet-class>com.apps.foursquare.sms.server.servlet.DisplayImage</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>DisplayImage</servlet-name>
+    <url-pattern>/displayimage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PushSMS</servlet-name>
+    <servlet-class>com.apps.foursquare.sms.server.servlet.PushSMS</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>PushSMS</servlet-name>
+    <url-pattern>/pushsms</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>Foursquaresms.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>
